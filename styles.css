@@ -1,0 +1,31 @@
+.hover-comment {
+	font-weight: bold;
+	text-decoration: underline;
+	text-decoration-style: dashed;
+}
+
+.hover-comment:hover::after {
+    content: attr(data-title); /* do not remove */
+    position: absolute;
+    bottom: 125%;
+    background: #333;
+	left: 0;
+    padding: 5px 8px;
+    border-radius: 4px;
+	max-width: 400px;
+	word-wrap: break-word;
+    white-space: normal;
+    font-size: .75em;
+    z-index: 100;
+  }
+
+.hover-comment[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 115%;
+    left: 10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+    z-index: 99;
+  }
