@@ -1,4 +1,6 @@
 .hover-comment {
+	position: relative;
+	display: inline-block;
 	font-weight: bold;
 	text-decoration: underline;
 	text-decoration-style: dashed;
@@ -9,10 +11,13 @@
     position: absolute;
     bottom: 125%;
     background: #333;
-	left: 0;
+	left: 50%;
+	transform: translateX(-50%);
     padding: 5px 8px;
-    border-radius: 4px;
-	max-width: 400px;
+	display: inline-block;
+	width: max-content;
+	max-width: 32ch;
+	min-width: unset;
 	word-wrap: break-word;
     white-space: normal;
     font-size: .75em;
@@ -23,9 +28,7 @@
     content: '';
     position: absolute;
     bottom: 115%;
-    left: 10px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent #333 transparent;
+    left: 50%;
+	transform: translateX(-50%);
     z-index: 99;
   }
